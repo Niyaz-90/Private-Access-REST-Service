@@ -19,12 +19,12 @@ public class PrivateAccessController {
     @PostMapping(value = "/pay", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> pay(@RequestBody Card card){
         userService.doTransaction();
-        Random random = new Random();
-        boolean success = random.nextBoolean();
-        if(success){
+//        Random random = new Random();
+//        boolean success = random.nextBoolean();
+//        if(success){
             return new  ResponseEntity<>("Успешно!", HttpStatus.ACCEPTED);
-        } else {
-            return new  ResponseEntity<>("Ошибка!", HttpStatus.BAD_REQUEST);
-        }
+//        } else {
+//            return new  ResponseEntity<>("Ошибка!", HttpStatus.BAD_REQUEST);
+//        }
     }
 }
